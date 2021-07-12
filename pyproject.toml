@@ -10,7 +10,7 @@ readme = "README.md"
 python = "^3.7"
 
 [tool.poetry.dev-dependencies]
-pontos = "^21.7.1"
+pontos = "^21.7.2"
 pylint = "^2.9.3"
 black = "^21.6b0"
 autohooks = "^21.6.0"
