@@ -33,6 +33,7 @@ pylint = "^2.12.2"
 black = "^21.7b0"
 autohooks = "^21.7.0"
 autohooks-plugin-black = "^21.7.1"
+autohooks-plugin-pylint = "^21.6.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -64,4 +65,4 @@ pre-commit = ['autohooks.plugins.black', 'autohooks.plugins.pylint']
 version-module-file = "<FIXME>/__version__.py"
 
 [tool.poetry.scripts]
-<FIXME> = '<FIXME>:main'
+FIXME = '<FIXME>:main'
