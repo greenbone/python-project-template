@@ -1,10 +1,28 @@
 [tool.poetry]
-name = "python-project-template"
+name = "<FIXME>"
 version = "0.1.0"
 description = "A GitHub Template for Python Projects"
 authors = ["Greenbone <info@greenbone.net>"]
 license = "AGPL-3.0-or-later"
 readme = "README.md"
+
+classifiers=[
+  # Full list: https://pypi.org/pypi?%3Aaction=list_classifiers
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",  # pylint: disable=line-too-long
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+packages = [
+  { include = "<FIXME>"},
+  { include = "tests", format = "sdist" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -44,3 +62,11 @@ pre-commit = ['autohooks.plugins.black', 'autohooks.plugins.pylint']
 
 [tool.pontos.version]
 version-module-file = "<FIXME>/__version__.py"
+
+[tool.poetry.scripts]
+<FIXME> = '<FIXME>:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
