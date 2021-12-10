@@ -65,8 +65,3 @@ version-module-file = "<FIXME>/__version__.py"
 
 [tool.poetry.scripts]
 <FIXME> = '<FIXME>:main'
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
