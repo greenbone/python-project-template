@@ -28,7 +28,7 @@ packages = [
 python = "^3.7"
 
 [tool.poetry.dev-dependencies]
-pontos = "^22.7.2"
+pontos = "^22.8.1"
 pylint = "^2.13.9"
 black = "^22.6"
 autohooks = "^22.7.2"
