@@ -15,6 +15,8 @@ classifiers=[
   "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
   "Operating System :: OS Independent",
   "Topic :: Software Development :: Libraries :: Python Modules",
 ]
@@ -28,12 +30,11 @@ packages = [
 python = "^3.7"
 
 [tool.poetry.dev-dependencies]
-pontos = "^22.10.0"
-pylint = "^2.13.9"
-black = "^22.10"
-autohooks = "^22.8.1"
-autohooks-plugin-black = "^22.8.1"
-autohooks-plugin-pylint = "^22.8.1"
+pontos = ">=22.10.0"
+autohooks = ">=22.8.0"
+autohooks-plugin-black = ">=22.8.0"
+autohooks-plugin-pylint = ">=22.8.0"
+autohooks-plugin-isort = ">=22.8.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -41,13 +42,11 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 80
-target-version = ['py37', 'py38', 'py39']
+target-version = ["py37", "py38", "py39", "py310", "py311"]
 exclude = '''
 /(
     \.git
-  | \.hg
   | \.venv
-  | \.circleci
   | \.github
   | \.vscode
   | _build
@@ -59,10 +58,14 @@ exclude = '''
 
 [tool.autohooks]
 mode = "poetry"
-pre-commit = ['autohooks.plugins.black', 'autohooks.plugins.pylint']
+pre-commit = ["autohooks.plugins.black",  "autohooks.plugin.isort", "autohooks.plugins.pylint"]
 
 [tool.pontos.version]
 version-module-file = "<FIXME>/__version__.py"
+
+[tool.isort]
+profile = "black"
+line_length = 80
 
 [tool.poetry.scripts]
 FIXME = '<FIXME>:main'
