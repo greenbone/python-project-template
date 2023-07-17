@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install and check with black, pylint and pontos.version
-        uses: greenbone/actions/lint-python@v2
+        uses: greenbone/actions/lint-python@v3
         with:
           packages: <FIXME>
           version: ${{ matrix.python-version }}
@@ -40,7 +40,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install python, poetry and dependencies
-        uses: greenbone/actions/poetry@v2
+        uses: greenbone/actions/poetry@v3
         with:
           version: ${{ matrix.python-version }}
       - name: Run unit tests
@@ -53,7 +53,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install and calculate and upload coverage to codecov.io
-        uses: greenbone/actions/coverage-python@v2
+        uses: greenbone/actions/coverage-python@v3
         with:
           version: "3.10"
 
@@ -63,7 +63,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install python, poetry and dependencies
-        uses: greenbone/actions/poetry@v2
+        uses: greenbone/actions/poetry@v3
         with:
           version: "3.10"
       - name: Build docs
