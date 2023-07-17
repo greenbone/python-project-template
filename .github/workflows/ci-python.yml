@@ -13,9 +13,8 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - 3.7
-          - 3.8
-          - 3.9
+          - "3.8"
+          - "3.9"
           - "3.10"
           - "3.11"
     steps:
@@ -24,7 +23,7 @@ jobs:
         uses: greenbone/actions/lint-python@v3
         with:
           packages: <FIXME>
-          version: ${{ matrix.python-version }}
+          python-version: ${{ matrix.python-version }}
 
   test:
     name: Run all tests
@@ -32,9 +31,8 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - 3.7
-          - 3.8
-          - 3.9
+          - "3.8"
+          - "3.9"
           - "3.10"
           - "3.11"
     steps:
@@ -42,7 +40,7 @@ jobs:
       - name: Install python, poetry and dependencies
         uses: greenbone/actions/poetry@v3
         with:
-          version: ${{ matrix.python-version }}
+          python-version: ${{ matrix.python-version }}
       - name: Run unit tests
         run: poetry run python -m unittest
 
@@ -55,7 +53,7 @@ jobs:
       - name: Install and calculate and upload coverage to codecov.io
         uses: greenbone/actions/coverage-python@v3
         with:
-          version: "3.10"
+          python-version: "3.10"
 
   build-docs:
     name: Build the documentation
@@ -65,6 +63,6 @@ jobs:
       - name: Install python, poetry and dependencies
         uses: greenbone/actions/poetry@v3
         with:
-          version: "3.10"
+          python-version: "3.10"
       - name: Build docs
         run: cd docs && poetry run make html
