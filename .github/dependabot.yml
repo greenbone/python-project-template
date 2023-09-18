@@ -5,13 +5,20 @@ updates:
     schedule:
       interval: weekly
       time: "04:00"
-    open-pull-requests-limit: 10
     allow:
       - dependency-type: direct
       - dependency-type: indirect
+    groups:
+      python-packages:
+        patterns:
+          - "*"
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
       time: "04:00"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
