@@ -29,7 +29,7 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.7.2"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pontos = ">=22.10.0"
 autohooks = ">=22.8.0"
 autohooks-plugin-black = ">=22.8.0"
