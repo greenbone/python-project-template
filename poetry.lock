@@ -24,13 +24,13 @@ trio = ["trio (<0.22)"]
 
 [[package]]
 name = "astroid"
-version = "2.15.6"
+version = "2.15.7"
 description = "An abstract syntax tree for Python with inference support."
 optional = false
 python-versions = ">=3.7.2"
 files = [
-    {file = "astroid-2.15.6-py3-none-any.whl", hash = "sha256:389656ca57b6108f939cf5d2f9a2a825a3be50ba9d589670f393236e0a03b91c"},
-    {file = "astroid-2.15.6.tar.gz", hash = "sha256:903f024859b7c7687d7a7f3a3f73b17301f8e42dfd9cc9df9d4418172d3e2dbd"},
+    {file = "astroid-2.15.7-py3-none-any.whl", hash = "sha256:958f280532e36ca84a13023f15cb1556fb6792d193acb87e1f3ca536b6fa6bd2"},
+    {file = "astroid-2.15.7.tar.gz", hash = "sha256:c522f2832a900e27a7d284b9b6ef670d2495f760ede3c8c0b004a5641d3c5987"},
 ]
 
 [package.dependencies]
@@ -593,13 +593,13 @@ test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=7.4)", "pytest-co
 
 [[package]]
 name = "pontos"
-version = "23.3.5"
+version = "23.3.3"
 description = "Common utilities and tools maintained by Greenbone Networks"
 optional = false
 python-versions = ">=3.7,<4.0"
 files = [
-    {file = "pontos-23.3.5-py3-none-any.whl", hash = "sha256:b82c6165c8d73ce66e234945ed52104b1895215e3dedac0fecee5326035a0df8"},
-    {file = "pontos-23.3.5.tar.gz", hash = "sha256:f19f42718faa20af54096fe88a9210f285e89b7586ffeca665ad49c9e3c7ae69"},
+    {file = "pontos-23.3.3-py3-none-any.whl", hash = "sha256:5e5ca435af2921e3cb59be988fb73d4e203db65d05d2e5cff81ceac6cbbba41b"},
+    {file = "pontos-23.3.3.tar.gz", hash = "sha256:28337c57b21173522b4e0bfc0165c51564aa09147f7fe382d2878af86f57c21c"},
 ]
 
 [package.dependencies]
@@ -608,7 +608,6 @@ httpx = {version = ">=0.23.0,<0.24.0", extras = ["http2"]}
 packaging = ">=20.3"
 python-dateutil = ">=2.8.2,<3.0.0"
 rich = ">=12.4.4"
-semver = ">=2.13.0,<3.0.0"
 tomlkit = ">=0.5.11"
 typing-extensions = {version = ">=4.4.0,<5.0.0", markers = "python_version < \"3.8\""}
 
@@ -707,13 +706,13 @@ jupyter = ["ipywidgets (>=7.5.1,<9)"]
 
 [[package]]
 name = "semver"
-version = "2.13.0"
-description = "Python helper for Semantic Versioning (http://semver.org/)"
+version = "3.0.1"
+description = "Python helper for Semantic Versioning (https://semver.org)"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+python-versions = ">=3.7"
 files = [
-    {file = "semver-2.13.0-py2.py3-none-any.whl", hash = "sha256:ced8b23dceb22134307c1b8abfa523da14198793d9787ac838e70e29e77458d4"},
-    {file = "semver-2.13.0.tar.gz", hash = "sha256:fa0fe2722ee1c3f57eac478820c3a5ae2f624af8264cbdf9000c980ff7f75e3f"},
+    {file = "semver-3.0.1-py3-none-any.whl", hash = "sha256:2a23844ba1647362c7490fe3995a86e097bb590d16f0f32dfc383008f19e4cdf"},
+    {file = "semver-3.0.1.tar.gz", hash = "sha256:9ec78c5447883c67b97f98c3b6212796708191d22e4ad30f4570f840171cbce1"},
 ]
 
 [[package]]
@@ -923,4 +922,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.7.2"
-content-hash = "d1ec55d36969bf8bba4ac4ef5ce6e78a30fcd2e8f867468c0517a1033f4d8560"
+content-hash = "a7d28fc32d7fa6927e0b01828d18eaa5fe1e90719af3b37db2a403e8f6600559"
