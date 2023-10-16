@@ -6,28 +6,24 @@ authors = ["Greenbone <info@greenbone.net>"]
 license = "AGPL-3.0-or-later"
 readme = "README.md"
 
-classifiers=[
+classifiers = [
   # Full list: https://pypi.org/pypi?%3Aaction=list_classifiers
   "Development Status :: 4 - Beta",
-  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",  # pylint: disable=line-too-long
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)", # pylint: disable=line-too-long
   "Environment :: Console",
   "Intended Audience :: Developers",
-  "Programming Language :: Python :: 3.7",
-  "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
   "Operating System :: OS Independent",
   "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
-packages = [
-  { include = "<FIXME>"},
-  { include = "tests", format = "sdist" },
-]
+packages = [{ include = "<FIXME>" }, { include = "tests", format = "sdist" }]
 
 [tool.poetry.dependencies]
-python = "^3.7.2"
+python = "^3.9"
 
 [tool.poetry.group.dev.dependencies]
 pontos = ">=22.10.0"
@@ -35,7 +31,7 @@ autohooks = ">=22.8.0"
 autohooks-plugin-black = ">=22.8.0"
 autohooks-plugin-pylint = ">=22.8.0"
 autohooks-plugin-isort = ">=22.8.0"
-coverage = "^7.2.7"
+coverage = ">=7.2.7"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -43,7 +39,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 80
-target-version = ["py37", "py38", "py39", "py310", "py311"]
+target-version = ["py39", "py310", "py311", "py312"]
 exclude = '''
 /(
     \.git
@@ -59,7 +55,11 @@ exclude = '''
 
 [tool.autohooks]
 mode = "poetry"
-pre-commit = ["autohooks.plugins.black",  "autohooks.plugins.isort", "autohooks.plugins.pylint"]
+pre-commit = [
+  "autohooks.plugins.black",
+  "autohooks.plugins.isort",
+  "autohooks.plugins.pylint",
+]
 
 [tool.pontos.version]
 version-module-file = "<FIXME>/__version__.py"
