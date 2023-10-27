@@ -12,6 +12,8 @@ updates:
       python-packages:
         patterns:
           - "*"
+    commit-message:
+      prefix: "Deps"
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -22,3 +24,5 @@ updates:
       github-actions:
         patterns:
           - "*"
+    commit-message:
+      prefix: "Deps"
