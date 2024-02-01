@@ -73,6 +73,11 @@ files = "<FIXME>"
 ignore_missing_imports = true
 explicit_package_bases = true
 
+[tool.coverage.run]
+branch = true
+omit = ["tests/*", "*/__init__.py"]
+source = ["<FIXME>"]
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
