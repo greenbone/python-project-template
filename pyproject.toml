@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "<FIXME>"
+name = "example"                                      # FIXME
 version = "0.1.0"
 description = "A GitHub Template for Python Projects"
 authors = ["Greenbone <info@greenbone.net>"]
@@ -9,7 +9,7 @@ readme = "README.md"
 classifiers = [
   # Full list: https://pypi.org/pypi?%3Aaction=list_classifiers
   "Development Status :: 4 - Beta",
-  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)", # pylint: disable=line-too-long
+  "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)", # pylint: disable=line-too-long
   "Environment :: Console",
   "Intended Audience :: Developers",
   "Programming Language :: Python :: 3.9",
@@ -20,10 +20,14 @@ classifiers = [
   "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
-packages = [{ include = "<FIXME>" }, { include = "tests", format = "sdist" }]
+packages = [
+  { include = "example" },
+  { include = "tests", format = "sdist" },
+] # FIXME
 
 [tool.poetry.dependencies]
 python = "^3.9"
+shtab = ">=1.6.5"
 
 [tool.poetry.group.dev.dependencies]
 pontos = ">=22.10.0"
@@ -57,7 +61,7 @@ pre-commit = [
 ]
 
 [tool.pontos.version]
-version-module-file = "<FIXME>/__version__.py"
+version-module-file = "example/__version__.py" # FIXME
 
 [tool.ruff]
 line-length = 80
@@ -65,17 +69,17 @@ target-version = "py39"
 extend-select = ["I", "PLE", "PLW"]
 
 [tool.poetry.scripts]
-FIXME = '<FIXME>:main'
+example-app = 'example:main' # FIXME
 
 [tool.mypy]
-files = "<FIXME>"
+files = "example"             # FIXME
 ignore_missing_imports = true
 explicit_package_bases = true
 
 [tool.coverage.run]
 branch = true
 omit = ["tests/*", "*/__init__.py"]
-source = ["<FIXME>"]
+source = ["example"]                # FIXME
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
