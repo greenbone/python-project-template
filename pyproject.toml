@@ -27,7 +27,6 @@ python = "^3.9"
 
 [tool.poetry.group.dev.dependencies]
 pontos = ">=22.10.0"
-autohooks = ">=23.10.0"
 autohooks-plugin-black = ">=23.10.0"
 autohooks-plugin-ruff = ">=23.10.0"
 coverage = ">=7.2.7"
