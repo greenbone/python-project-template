@@ -30,7 +30,7 @@ python = "^3.9"
 shtab = ">=1.6.5"
 
 [tool.poetry.group.dev.dependencies]
-pontos = ">=22.10.0"
+pontos = ">=26.2.0"
 autohooks-plugin-black = ">=23.10.0"
 autohooks-plugin-ruff = ">=23.10.0"
 autohooks-plugin-mypy = ">=23.10.0"
