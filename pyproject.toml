@@ -28,14 +28,14 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-shtab = ">=1.6.5"
+shtab = ">=1.8.1"
 
 [tool.poetry.group.dev.dependencies]
 pontos = ">=26.2.0"
 autohooks-plugin-black = ">=23.10.0"
 autohooks-plugin-ruff = ">=23.10.0"
 autohooks-plugin-mypy = ">=23.10.0"
-coverage = ">=7.14.2"
+coverage = ">=7.15.0"
 
 [tool.black]
 line-length = 80
