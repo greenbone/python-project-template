@@ -28,7 +28,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-shtab = ">=1.8.1"
+shtab = ">=1.8.2"
 
 [tool.poetry.group.dev.dependencies]
 pontos = ">=26.2.0"
