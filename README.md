@@ -13,7 +13,7 @@ Python Project Template
 
 ## Requirements
 
-Python 3.10 and later is supported.
+Python 3.11 and later is supported.
 
 ## Development
 
