@@ -13,11 +13,11 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - "3.10"
           - "3.11"
           - "3.12"
           - "3.13"
           - "3.14"
+          - "3.15"
     steps:
       - uses: actions/checkout@v7
       - name: Install and check with black, pylint and pontos.version
@@ -33,11 +33,11 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - "3.10"
           - "3.11"
           - "3.12"
           - "3.13"
           - "3.14"
+          - "3.15"
     steps:
       - uses: actions/checkout@v7
       - name: Install python, poetry and dependencies
@@ -53,11 +53,11 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - "3.10"
           - "3.11"
           - "3.12"
           - "3.13"
           - "3.14"
+          - "3.15"
     steps:
       - uses: actions/checkout@v7
       - name: Run mypy
@@ -74,7 +74,7 @@ jobs:
       - name: Install and calculate and upload coverage to codecov.io
         uses: greenbone/actions/coverage-python@v3
         with:
-          python-version: "3.10"
+          python-version: "3.11"
 
   build-docs:
     name: Build the documentation
@@ -84,6 +84,17 @@ jobs:
       - name: Install python, poetry and dependencies
         uses: greenbone/actions/poetry@v3
         with:
-          python-version: "3.10"
+          python-version: "3.11"
       - name: Build docs
         run: cd docs && poetry run make html
+
+  all-python-ci-jobs-passed:
+    name: All Python CI jobs passed
+    needs: [linting, test, mypy, codecov, build-docs]
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require all CI jobs to succeed
+        env:
+          NEEDS: ${{ toJSON(needs) }}
+        run: jq -e 'all(.[]; .result == "success")' <<<"$NEEDS"
